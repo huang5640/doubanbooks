@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   def index
     @search_term = params[:looking_for] || "python"
-    @books = Book.name(@search_term)
+    @books = Book.index(@search_term)
   end
 
   def isbn
